@@ -18,7 +18,7 @@ def generate_recommendation_pdf(
     db: Session = Depends(get_db),
     current_user=Depends(get_current_user),
 ):
-    output_dir = "/workspace/backend/generated"
+    output_dir = "/src/backend/generated"
     os.makedirs(output_dir, exist_ok=True)
     file_name = f"recommendation_{current_user.id}_{int(datetime.utcnow().timestamp())}.pdf"
     file_path = os.path.join(output_dir, file_name)
