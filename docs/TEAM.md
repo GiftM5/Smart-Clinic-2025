@@ -2,7 +2,7 @@
 
 ## ⚒️ Team Name
 ```
-**TheKoders**
+TheKoders
 ```
 
 ## 👥 Members
