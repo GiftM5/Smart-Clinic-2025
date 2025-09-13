@@ -1,19 +1,18 @@
 # Team Information
 
 ## ⚒️ Team Name
-``` c
-// TODO: Fill-in the name of your team.
+``` **TheKoders**
 ```
 
 ## 👥 Members
 | Name     | Role                | Institution           | Discord Handle | Email |
 |----------|---------------------|-----------------------| -------------------|-------------|
-| **Mpho Mofokeng**   | Backend Developer   | WeThinkCode_ | Gift_M5 | <mofokeng_mpho@icloud.com> |
-| **Luyolo Tuta**   | Frontend Developer  | WeThinkCode_ | Luyolo23 | <luyolo.tuta23@gmail.com> |
-| **Cadeau Mundoringisa**   | Designer            | WeThinkCode_| CadeauM | <cadeaucodes@gmail.com> |
+| **Mpho Mofokeng**   | Backend Developer   | WeThinkCode_ | Gift_M | <mofokeng_mpho@icloud.com> |
+| **Luyolo Tuta**   | Frontend Developer  | WeThinkCode_ | _larry23 | <luyolo.tuta23@gmail.com> |
+| **Cadeau Mundoringisa**   | Designer            | WeThinkCode_| cadeaumpho_ | <cadeaucodes@gmail.com> |
 
 
 
 ## 📧 Other Contact Info
-- GitHub Repo: <https://github.com/user-name/GiftM5>
+- GitHub Repo: <[https://github.com/GiftM5/Smart-Clinic-2025])>
 - Other Info (if available): LinkedIn, Website, etc.
