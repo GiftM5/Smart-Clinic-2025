@@ -23,10 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
         healthPoints: 240,
     };
 
-    userNameDisplay.textContent = userData.fullName.split(' ')[0]; 
-    profileNameDisplay.textContent = userData.fullName;
-    document.getElementById('profileEmail').textContent = userData.email;
-    document.getElementById('healthPoints').textContent = userData.healthPoints;
+    // FIXED: Changed 'userData' back to 'mockUserData'
+    userNameDisplay.textContent = mockUserData.fullName.split(' ')[0]; 
+    profileNameDisplay.textContent = mockUserData.fullName;
+    document.getElementById('profileEmail').textContent = mockUserData.email;
+    document.getElementById('healthPoints').textContent = mockUserData.healthPoints;
 
     // The logout button logic stays the same.
     logoutButton.addEventListener("click", (e) => {
@@ -99,6 +100,5 @@ document.addEventListener("DOMContentLoaded", () => {
         triageResultContainer.className = 'triage-result severity-urgent'; // Use the red "urgent" style for errors
         triageResultContainer.innerHTML = `<h4>Error</h4><p>${message}</p>`;
     }
-
 
 });
