@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1>Book an Appointment</h1>
+        <div style="text-align:center;margin-bottom:12px;">
+            <button id="logoutBtn" style="background:#e74c3c;color:#fff;border:none;padding:6px 10px;border-radius:6px;cursor:pointer;">Logout</button>
+        </div>
     <form id="appointmentForm">
         <label for="date">Date:</label>
         <input type="date" id="date" name="date" required>
@@ -26,6 +29,24 @@
         
     </ul>
 
-    <script src="appointments.js"></script>
+        <script>
+            // Redirect to login if not authenticated
+            (function(){
+                const token = localStorage.getItem('access_token');
+                if (!token) {
+                    window.location.href = 'login.html';
+                }
+            })();
+            // Logout handler
+            document.addEventListener('DOMContentLoaded', function() {
+                const btn = document.getElementById('logoutBtn');
+                if (btn) btn.addEventListener('click', function(){
+                    localStorage.removeItem('access_token');
+                    localStorage.removeItem('user_email');
+                    window.location.href = 'login.html';
+                });
+            });
+        </script>
+        <script src="appointments.js"></script>
 </body>
 </html>
