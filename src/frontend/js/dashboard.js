@@ -16,18 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const triageForm = document.getElementById("triageForm");
     const triageResultContainer = document.getElementById("triageResult");
     
-    // INITIAL DATA (Simulated
-    // Later, you will fetch this data from a `/users/me` endpoint.
-    const mockUserData = {
-        fullName: "Jessica Zulu",
-        email: "jessica.zulu@example.com",
-        healthPoints: 240,
+    // Try to read user info from localStorage (set at login/signup)
+    const storedFullName = localStorage.getItem('user_fullname');
+    const storedEmail = localStorage.getItem('user_email');
+    const storedHealthPoints = localStorage.getItem('user_healthPoints');
+
+    const userData = {
+        fullName: storedFullName || 'Mock User',
+        email: storedEmail || 'mock@example.com',
+        healthPoints: storedHealthPoints ? Number(storedHealthPoints) : 240,
     };
-    
-    userNameDisplay.textContent = mockUserData.fullName.split(' ')[0]; 
-    profileNameDisplay.textContent = mockUserData.fullName;
-    document.getElementById('profileEmail').textContent = mockUserData.email;
-    document.getElementById('healthPoints').textContent = mockUserData.healthPoints;
+
+    userNameDisplay.textContent = userData.fullName.split(' ')[0]; 
+    profileNameDisplay.textContent = userData.fullName;
+    document.getElementById('profileEmail').textContent = userData.email;
+    document.getElementById('healthPoints').textContent = userData.healthPoints;
 
 
     logoutButton.addEventListener("click", (e) => {
