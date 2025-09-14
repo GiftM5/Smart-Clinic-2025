@@ -17,6 +17,7 @@ class Settings(BaseSettings):
     jwt_secret_key: str = "CHANGE_ME_SUPER_SECRET"
     jwt_algorithm: str = "HS256"
     access_token_expire_minutes: int = 60 * 24
+    gemini_api_key: str = "AIzaSyAStzyhH_s9QSg1yqdp7XyABELh2phJHhM"
 
     # Notifications (optional)
     twilio_account_sid: str | None = None
