@@ -72,7 +72,7 @@ function App() {
             <div className="space-y-8">
               <div className="text-center space-y-4">
                 <h1 className="text-4xl font-bold neon-text">
-                  PulseAI Dashboard
+                Smart Clinic Dashboard
                 </h1>
                 <p className="text-dark-300 text-lg max-w-2xl mx-auto">
                   Real-time health monitoring with AI-powered insights
