@@ -15,5 +15,5 @@ TheKoders
 
 
 ## 📧 Other Contact Info
-- GitHub Repo: <[https://github.com/GiftM5/Smart-Clinic-2025])>
+- GitHub Repo: <[https://github.com/GiftM5/Smart-Clinic-2025]>
 - Other Info (if available): LinkedIn, Website, etc.
