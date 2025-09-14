@@ -1,0 +1,209 @@
+body {
+    background-color: var(--background-light);
+}
+
+.dashboard-header {
+    background: var(--background-white);
+    box-shadow: var(--shadow-sm);
+    padding: 0.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.header-logo img {
+    height: 90px;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.logout-link {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+}
+.logout-link:hover {
+    color: var(--primary-color);
+}
+
+
+.dashboard-main {
+    padding-top: 100px; 
+    padding-bottom: 40px;
+}
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 24px;
+}
+.card {
+    background: var(--background-white);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+
+.profile-card {
+    text-align: center;
+}
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e0f2fe;
+    margin: 0 auto 16px;
+
+}
+.profile-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+.profile-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+.gamification-card {
+    margin-top: 24px;
+}
+.points-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 16px 0;
+}
+.points-display .fa-star {
+    color: #ffc107;
+}
+.progress-bar {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+.progress {
+    height: 100%;
+    background-color: var(--accent-color);
+}
+
+
+.triage-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+.triage-subtitle {
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+.form-group {
+    margin-bottom: 16px;
+}
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+.vitals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.triage-card button {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Triage Result Styling */
+.triage-result {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 5px solid;
+}
+.triage-result.severity-mild {
+    background-color: #e0f2f1;
+    border-color: #26a69a;
+}
+.triage-result.severity-moderate {
+    background-color: #fff3e0;
+    border-color: #ffa726;
+}
+.triage-result.severity-urgent {
+    background-color: #ffebee;
+    border-color: #ef5350;
+}
+.triage-result h4 {
+    margin-top: 0;
+}
+
+
+.quick-actions-card .btn-action {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.quick-actions-card .btn-action:not(:last-child) {
+    margin-bottom: 12px;
+}
+.quick-actions-card .btn-action:hover {
+    background-color: var(--background-light);
+    color: var(--primary-color);
+}
+.btn-emergency {
+    border-color: #ef5350;
+    color: #ef5350;
+}
+.btn-emergency:hover {
+    background-color: #ef5350;
+    color: white;
+}
+.upcoming-appointment-card {
+    margin-top: 24px;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 240px 1fr;
+    }
+    .sidebar-right {
+        grid-column: 1 / -1;
+        order: 3;
+    }
+}
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
