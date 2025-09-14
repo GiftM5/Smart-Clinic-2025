@@ -179,7 +179,7 @@ const VitalsDashboard = ({ vitalsData, isLoading }) => {
                     opacity: [0.7, 1, 0.7],
                   }}
                   transition={{
-                    duration: 60 / (vital.value || 70), // Sync with actual heart rate
+                    duration: 60 / (vital.value || 70), 
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}

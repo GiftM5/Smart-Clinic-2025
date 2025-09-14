@@ -53,7 +53,7 @@ function App() {
             <div className="space-y-8">
               <div className="flex items-center justify-between">
                 <div className="text-center space-y-1">
-                  <h1 className="text-4xl font-bold neon-text">AI Clinic</h1>
+                  <h1 className="text-4xl font-bold neon-text">Smart Clinic</h1>
                   <p className="text-dark-300 text-sm">Digital reception, symptom checking and navigation</p>
                 </div>
                 <div className="text-xs text-dark-300">{user ? `Logged in: ${user.phone}` : <button className="text-primary-400" onClick={() => setCurrentView('login')}>Login</button>}</div>
@@ -97,7 +97,7 @@ function App() {
               <div className="flex justify-center mt-12 gap-3">
                 <button onClick={() => setCurrentView('landing')} className="glass-card px-6 py-3 rounded-lg text-primary-400">← Home</button>
                 <button onClick={() => setCurrentView('learn')} className="glass-card px-6 py-3 rounded-lg text-green-400">Learn More</button>
-                <button onClick={() => setCurrentView('clinic')} className="glass-card px-6 py-3 rounded-lg text-yellow-400">Enter AI Clinic</button>
+                <button onClick={() => setCurrentView('clinic')} className="glass-card px-6 py-3 rounded-lg text-yellow-400">Enter Smart Clinic</button>
               </div>
             </div>
           </ErrorBoundary>
