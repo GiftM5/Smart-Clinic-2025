@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     message.style.color = '#333';
     message.textContent = 'Creating account...';
 
-    // The backend expects a JSON object. We create one here.
+
     const userData = {
       full_name: document.getElementById("signupName").value,
       email: document.getElementById("signupEmail").value,
@@ -33,11 +33,37 @@ document.addEventListener("DOMContentLoaded", () => {
         message.textContent = data.detail || "An error occurred during sign up.";
       } else {
         message.style.color = 'green';
-        message.textContent = 'Account created successfully! Redirecting to login...';
+        message.textContent = 'Account created successfully! Logging you in...';
 
-        setTimeout(() => {
-          window.location.href = "login.html";
-        }, 2000);
+        const formBody = new URLSearchParams();
+        formBody.append('username', userData.email);
+        formBody.append('password', userData.password);
+
+        try {
+          const loginRes = await fetch('http://127.0.0.1:8000/auth/login', {
+            method: 'POST',
+            body: formBody
+          });
+          const loginData = await loginRes.json();
+          if (!loginRes.ok) {
+            message.style.color = '#dc2626';
+            message.textContent = loginData.detail || 'Auto-login failed; please login manually.';
+            setTimeout(() => window.location.href = 'login.html', 2000);
+          } else {
+            
+            localStorage.setItem('accessToken', loginData.access_token);
+            localStorage.setItem('user_email', userData.email);
+            localStorage.setItem('user_fullname', userData.full_name);
+            message.style.color = 'green';
+            message.textContent = 'Logged in! Redirecting to appointments...';
+            setTimeout(() => window.location.href = 'appointments.html', 1000);
+          }
+        } catch (err) {
+          console.error('Auto-login error:', err);
+          message.style.color = '#dc2626';
+          message.textContent = 'Auto-login failed; please login manually.';
+          setTimeout(() => window.location.href = 'login.html', 2000);
+        }
       }
     } catch (error) {
       message.style.color = '#dc2626';

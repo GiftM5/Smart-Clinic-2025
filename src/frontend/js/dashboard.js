@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         email: "jessica.zulu@example.com",
         healthPoints: 240,
     };
-    
-    userNameDisplay.textContent = mockUserData.fullName.split(' ')[0]; 
-    profileNameDisplay.textContent = mockUserData.fullName;
-    document.getElementById('profileEmail').textContent = mockUserData.email;
-    document.getElementById('healthPoints').textContent = mockUserData.healthPoints;
+
+    userNameDisplay.textContent = userData.fullName.split(' ')[0]; 
+    profileNameDisplay.textContent = userData.fullName;
+    document.getElementById('profileEmail').textContent = userData.email;
+    document.getElementById('healthPoints').textContent = userData.healthPoints;
 
     // The logout button logic stays the same.
     logoutButton.addEventListener("click", (e) => {

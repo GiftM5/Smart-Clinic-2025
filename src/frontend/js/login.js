@@ -29,7 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
         errorMessage.style.color = 'green';
         errorMessage.textContent = 'Success! Redirecting...';
         
-        localStorage.setItem("accessToken", data.access_token);
+  localStorage.setItem("accessToken", data.access_token);
+  // store logged-in email for dashboard/profile
+  localStorage.setItem('user_email', document.getElementById('username').value);
         
         setTimeout(() => {
           window.location.href = "dashboard.html"; // The page to go to after login
