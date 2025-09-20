@@ -1,8 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Heart, Activity, Zap, Smartphone, Brain, Shield } from 'lucide-react'
+import { MessageSquare } from 'lucide-react'
 
-const Landing = ({ onGetStarted, onOpenClinic, onOpenLearn, onOpenLogin }) => {
+
+const Landing = ({ onGetStarted, onOpenClinic, onOpenLearn, onOpenLogin, onOpenChat }) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -151,6 +153,15 @@ const Landing = ({ onGetStarted, onOpenClinic, onOpenLearn, onOpenLogin }) => {
               whileTap={{ scale: 0.95 }}
             >
               Learn More
+            </motion.button>
+             
+            <motion.button
+              onClick={onOpenChat} // Add this onClick handler
+              className="glass-card px-8 py-4 rounded-xl text-lg font-semibold text-purple-400 hover-glow transition-all duration-300 glow-border"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+            Talk to Buddy
             </motion.button>
 
             <motion.button
